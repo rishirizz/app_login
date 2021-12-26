@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../utilities/app_utility.dart' as global;
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -28,7 +30,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               child: Column(
                 children: [
                   Lottie.asset('images/login_lottie.json', height: 400),
-                  Text('Enterprise team collaboration'),
+                  Text(
+                    'Enterprise team collaboration',
+                    style: GoogleFonts.pacifico(
+                      textStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: (global.isSmallDevice(context)) ? 20 : 40,
+                      ),
+                    ),
+                  ),
                   SizedBox(
                     height: 10,
                   ),
